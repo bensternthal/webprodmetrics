@@ -1,0 +1,36 @@
+doctype 5
+html
+  head
+    link(rel='stylesheet', href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300')
+    link(rel='stylesheet', href='/stylesheets/style.css')
+
+  body
+    h1 # Of Contributors
+    div
+      h2= repository
+      h3= 'Total Contributors: ' + totalContributors
+      br
+      br
+      table
+        thead
+          tr
+            th Contributor
+            th # Of Contributions
+            th Mozilla.org Member?
+            th Details
+            tbody
+              - each contributor in contributors
+                tr
+                  td= contributor.login
+                  td= contributor.contributions
+                  td= contributor.member
+                  td: a(href='/stats/repo/' + repository + '/user/' + contributor.login, class='view-link') View
+
+     div#stats Last 30 Commits Load Here 
+  #footer    
+    script(src='//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js')                                     
+    script(src='/javascripts/stats.js', data-main='/javascripts/main')
+
+
+
+  

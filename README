@@ -1,0 +1,20 @@
+WebProd Stats
+===
+Queries Github for contribute stats, outputs in either html or csv.
+
+Install
+===
+1. git clone
+2. npm install
+4. node app.js
+
+
+Running
+===
+# HTML Version http://yourhost.com/{repo}
+# CSV Versionhttp://yourhost.com/{repo}?csv=true
+
+Todo
+===
+# CSV view should output file
+# index needs some cleanup
